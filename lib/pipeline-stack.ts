@@ -1,5 +1,5 @@
 import { Stack, StackProps, Stage } from "aws-cdk-lib";
-import { CodePipeline } from "aws-cdk-lib/pipelines";
+import { CodePipeline, ManualApprovalStep } from "aws-cdk-lib/pipelines";
 import type { Construct } from "constructs";
 import { CdkDemoBotStack } from "./cdk-demo-bot-stack";
 import { CodeBuildStepWithPrimaryOutput } from "./CodeBuildStepWithPrimaryOutput";
@@ -51,8 +51,12 @@ export class PipelineStack extends Stack {
       env: {
         account: props.productionAccount,
         region: props.productionRegion
-      }
-    }));
+      },
+    }), {
+      pre: [
+        new ManualApprovalStep("Go to Production")
+      ]
+    });
   }
 }
 
