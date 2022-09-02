@@ -1,7 +1,7 @@
 import { Stack, StackProps, Stage } from "aws-cdk-lib";
 import { CodePipeline, ManualApprovalStep } from "aws-cdk-lib/pipelines";
 import type { Construct } from "constructs";
-import { CdkDemoBotStack } from "./cdk-demo-bot-stack";
+import { CdkDemoBotStack } from "./cdk-demo-bot-stack.js";
 import { CodeBuildStepWithPrimaryOutput } from "./CodeBuildStepWithPrimaryOutput";
 import { CodePipelineSourceWithPrimaryOutput } from "./CodePipelineSourceWithPrimaryOutput";
 
