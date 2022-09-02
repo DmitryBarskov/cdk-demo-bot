@@ -33,7 +33,7 @@ export class PipelineStack extends Stack {
         ),
         commands: [
           'npm install',
-          `DIL_CDK_SCOPE=${props.scope ?? ''} npm run -- cdk synth -a "npx ts-node --esm bin/pipeline.ts`
+          `DIL_CDK_SCOPE=${props.scope ?? ''} npm run -- cdk synth -a "npx ts-node --esm bin/pipeline.ts"`
         ]
       })
     });
