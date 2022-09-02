@@ -6,7 +6,7 @@ import { CodeBuildStepWithPrimaryOutput } from "./CodeBuildStepWithPrimaryOutput
 import { CodePipelineSourceWithPrimaryOutput } from "./CodePipelineSourceWithPrimaryOutput";
 
 interface PipelineStackProps extends StackProps {
-  scope?: string | undefined;
+  scope: string;
   stagingAccout: string,
   productionAccount: string,
   stagingRegion: string,
@@ -61,7 +61,7 @@ export class PipelineStack extends Stack {
 }
 
 interface CdkDemoBotDeployStageProps extends StackProps {
-  scope?: string | undefined;
+  scope: string;
 }
 
 class CdkDemoBotDeployStage extends Stage {

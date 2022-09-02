@@ -16,7 +16,7 @@ ensureEnv('CDK_DEFAULT_REGION');
 const app = new cdk.App();
 new PipelineStack(app, 'CdkDemoBotStack', {
   stackName: `${process.env['DIL_CDK_SCOPE']}-cdk-demo-bot-pipeline`,
-  scope: process.env['DIL_CDK_SCOPE'],
+  scope: process.env['DIL_CDK_SCOPE']!,
   stagingAccout: '676641176260',
   stagingRegion: 'us-west-2',
   productionAccount: '676641176260',
