@@ -21,5 +21,5 @@ export const handler = async (event: any, context: any, callback: any) => {
 }
 
 app.message('goodbye', async ({ say }) => {
-    await say(`See ya later`);
+    await say(`See ya later2`);
 });
