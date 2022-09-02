@@ -2,8 +2,8 @@ import { Stack, StackProps, Stage } from "aws-cdk-lib";
 import { CodePipeline, ManualApprovalStep } from "aws-cdk-lib/pipelines";
 import type { Construct } from "constructs";
 import { CdkDemoBotStack } from "./cdk-demo-bot-stack.js";
-import { CodeBuildStepWithPrimaryOutput } from "./CodeBuildStepWithPrimaryOutput";
-import { CodePipelineSourceWithPrimaryOutput } from "./CodePipelineSourceWithPrimaryOutput";
+import { CodeBuildStepWithPrimaryOutput } from "./CodeBuildStepWithPrimaryOutput.js";
+import { CodePipelineSourceWithPrimaryOutput } from "./CodePipelineSourceWithPrimaryOutput.js";
 
 interface PipelineStackProps extends StackProps {
   scope: string;
